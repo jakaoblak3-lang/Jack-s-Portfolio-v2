@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: rgba(255, 255, 255, 0.2);
+      --accent: #00f2fe;
+      --bg: #0a0f1e;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    header {
+      background: linear-gradient(135deg, #1a1f35, #111827);
+      color: #fff;
+      padding: 100px 20px;
+      text-align: center;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      position: relative;
+      backdrop-filter: blur(12px);
+    }
+    header h1 {
+      font-size: clamp(2.5em, 6vw, 3.5em);
+      font-weight: 700;
+      margin-bottom: 10px;
+      animation: fadeDown 1s ease forwards;
+      background: linear-gradient(90deg, #00f2fe, #4facfe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    header p {
+      font-size: clamp(1em, 2.5vw, 1.2em);
+      color: var(--muted);
+      animation: fadeUp 1.3s ease forwards;
+    }
+    section {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 40px 20px;
+      text-align: center;
+      border-radius: 20px;
+      background: var(--primary);
+      backdrop-filter: blur(15px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+      animation: fadeIn 1.2s ease forwards;
+    }
+    section h2 {
+      font-size: clamp(1.6em, 4vw, 2em);
+      font-weight: 600;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #4facfe, #00f2fe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    section p {
+      font-size: 1em;
+      color: var(--muted);
+      margin: 0 auto 25px;
+    }
+    .pay-button {
+      display: inline-block;
+      padding: 14px 36px;
+      font-size: 1.1em;
+      font-weight: 600;
+      color: #fff;
+      background: linear-gradient(135deg, #00f2fe, #4facfe);
+      border-radius: 14px;
+      text-decoration: none;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .pay-button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.25);
+      transform: skewX(-20deg);
+      transition: left 0.5s ease;
+    }
+    .pay-button:hover::before {
+      left: 100%;
+    }
+    .pay-button:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 10px 25px rgba(0, 242, 254, 0.4);
+    }
+    footer {
+      background: #111827;
+      color: #94a3b8;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9em;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      margin-top: 60px;
+      backdrop-filter: blur(8px);
+    }
+    /* Animations */
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(25px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeUp {
+      from {opacity: 0; transform: translateY(15px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeDown {
+      from {opacity: 0; transform: translateY(-15px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Jack’s Portfolio</h1>
+    <p>3D Modeler • Builder • UI Designer</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>I specialize in creating 3D models, builds, and UI designs. My focus is delivering premium, functional, and polished digital experiences.</p>
+    <a class="pay-button" href="https://buy.stripe.com/test_8x26oI4Le7Ex3jY8rC24000" target="_blank">Support My Work</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Jack. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
